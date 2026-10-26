@@ -1,0 +1,47 @@
+[
+  {
+    "title": "什么是 Agent",
+    "keywords": [
+      "agent",
+      "智能体"
+    ],
+    "content": "Agent 是围绕目标循环运行的程序：模型根据任务和已有观察选择动作，程序执行工具，将结果反馈给模型，直到给出答案或触发停止条件。模型负责决策，宿主程序负责实际执行。"
+  },
+  {
+    "title": "ReAct 原理",
+    "keywords": [
+      "react",
+      "推理",
+      "行动"
+    ],
+    "content": "ReAct 是 Reason + Act，将推理与行动交替进行：依据任务选择下一步动作，调用工具，读取观察结果，再决定继续调用或结束。本项目显示简短行动说明，不展示模型内部详细推理。",
+    "source": "https://arxiv.org/abs/2210.03629"
+  },
+  {
+    "title": "工具调用和普通问答",
+    "keywords": [
+      "工具",
+      "调用",
+      "问答"
+    ],
+    "content": "普通问答主要依赖模型已有知识。工具调用让程序读取外部数据或执行操作。模型输出工具名与参数，Python 校验并执行函数，再把结果送回模型；模型本身并没有直接执行 Python。"
+  },
+  {
+    "title": "GPU 与本地运行",
+    "keywords": [
+      "gpu",
+      "cpu",
+      "显卡",
+      "本地"
+    ],
+    "content": "Agent 控制循环和 HTTP 工具不需要 GPU。本地大语言模型可用 CPU 或 GPU 推理，速度取决于模型大小和硬件。本项目 --provider ollama 默认使用 DeepSeek-R1 7B，并由 Ollama 自动使用 GPU；--device cpu 强制使用 CPU。--provider deepseek 调用云端 API，无需本机 GPU；天气服务仍需要网络。"
+  },
+  {
+    "title": "温度的定义",
+    "keywords": [
+      "温度",
+      "temperature"
+    ],
+    "content": "温度是表征物体冷热程度的物理量。温度概念解释属于知识问答，不需要查询某个城市的天气。国际单位制中热力学温度的单位是开尔文（K）。"
+  }
+]

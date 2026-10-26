@@ -1,0 +1,13 @@
+__pycache__/
+.env
+.env.*
+!.env.example
+*.log
+.sessions/
+
+# 本机生成的评测轨迹可能包含用户输入，不提交到公开仓库。
+evaluation_*.json
+*_evaluation*.json
+dialogue_followup_*.json
+local_r1_test_results.json
+*.tmp
